@@ -1,0 +1,163 @@
+.App {
+    background-color: rgb(88, 106, 107);
+    max-width: 900px;
+    margin: 30px auto;
+    overflow: auto;
+    min-height: 300px;
+    padding: 30px;
+    border: 10px solid White;
+    border-radius: 20px;
+    box-shadow: 0 16px 20px 0 rgba(0,0,0,0.2);
+  }
+
+.Header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .Search {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+  }
+
+ 
+img{
+    width: 350px;
+    height: 500px;
+    border: 4px solid White;
+    border-radius: 5px;
+    box-shadow: 0 16px 20px 0 rgba(0,0,0,0.2);
+
+}
+.MovieCard{
+    width: 300px;
+    height: 400px;
+    transform-style: preserve-3d;
+    margin: 5%;
+}
+.Face{
+    position: absolute;
+    top : 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    Backface-visibility: hidden;
+    transition: 2s ease-in-out;
+    transform: perspective(500px) rotateY(0deg);
+}
+.front {
+    background-color: white;
+}
+.MovieCard:hover .Face.front
+{
+    transform: perspective(500px) rotateY(180deg);
+}
+.back {
+    background-color: white;
+    transform: perspective(500px) rotateY(180deg);
+}
+.MovieCard:hover .Face.back
+{
+    transform: perspective(500px) rotateY(360deg);
+}
+.Movies{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.Header h1{
+    letter-spacing: 15px;
+    color: rgb(101, 162, 165);
+    -webkit-box-reflect: below 1px linear-dradient(transparent,black) ;
+    Line-height: 0.70em;
+    outline: none;
+    animation: animate 5s linear infinite;
+}
+@Keyframes animate
+{
+    0%,10%,20%,50.1%,60%,65.1%,80%,90%,92.1%,100%
+    {
+        color:rgb(101, 162, 165);
+        text-shadow: none;
+    }
+    18.1%,20.1%,30%,50%,60.1%,65%,80.1%,90%,92.1%,100%
+    {
+        color: white;
+        text-shadow: 0 0 10px rgb(129, 199, 202),
+        0 0 20px rgb(129, 199, 202),
+        0 0 40px rgb(129, 199, 202),
+        0 0 80px rgb(129, 199, 202),
+        0 0 100px rgb(129, 199, 202);
+    }
+
+}
+form{
+    display: flex;
+    justify-content: space-around;
+    height: 200px;
+    align-items: center;
+    border: 4px solid White;
+    border-radius: 5px;
+    box-shadow: 0 16px 20px 0 rgba(0,0,0,0.2);
+}
+.right{
+    display: flex;
+    flex-direction: column;
+}
+.left{
+    display: flex;
+    flex-direction: column;
+}
+label{
+    color: white;
+    font-size: 20px;
+}
+.btn{
+    width: 100px;
+    color: white;
+}
+
+.nm{
+    font-size: 30px;
+}
+.info{
+    font-size: 20;
+}
+
+.MovieDetails{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+.DETAIL{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    margin-left: 6%;
+    color: white;
+}
+iframe{
+    width: 90%;
+    height: 50%;
+    border: 4px solid White;
+    border-radius: 5px;
+    box-shadow: 0 16px 20px 0 rgba(0,0,0,0.2);
+}
+.gohome{
+    color: white;
+    text-align: center;
+    width: 50%;
+}
+.gohome:hover{
+  
+    color: black;
+    background-color: white;
+    text-align: center;
+}
